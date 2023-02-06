@@ -6,6 +6,8 @@
   --royalblue: #4169e1;
   --teal: #008080;
   --violet: #9400d3;
+  --brightgreen: #8bd9c7;
+  --green: #219438;
 }
 
 /* Use attribute selectors for the first part of the exercise */
@@ -14,8 +16,33 @@ li[class] {
   color: var(--red);
 }
 
+li[class*='do'] {
+  color: var(--royalblue);
+}
+
+li[class$='og'] {
+  color: var(--magenta);
+}
+
+li[class='parrot'] {
+  color: var(--green);
+}
+
+li[id] {
+  color: var(--brightgreen);
+}
+
 /* Use descendant, child, and sibling selectors for the second part */
 
-section li {
+.list-food li,
+.list-cleaning li {
   color: var(--green);
+}
+
+.first ~ li {
+  color: var(--magenta);
+}
+
+.second + li {
+  color: var(--royalblue);
 }
