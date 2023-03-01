@@ -4,7 +4,12 @@ const replaceItems = (input) => {
   // for reference, see the MDN "Regular Expressions" entry:
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
-  return input;
+  const regEx1 = /gold/gi;
+  const regEx2 = /wander/gi;
+
+  let output = input.replaceAll(regEx1, 'SHINY').replaceAll(regEx2, 'roam');
+
+  return output;
 };
 
 console.log(replaceItems('All that is gold does not glitter'));
